@@ -10,8 +10,9 @@ jobs:
   CodeQL-Build:
     runs-on: ubuntu-latest
     strategy: 
+      fail-fast: false
       matrix: 
-          languages: ['python', 'java', 'csharp', 'php']
+          language: ['python', 'java', 'csharp', 'php']
         
 
     permissions:
