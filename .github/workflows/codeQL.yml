@@ -10,8 +10,8 @@ jobs:
   CodeQL-Build:
     runs-on: ubuntu-latest
     strategy: 
-          matrix: 
-              lanaguages: ['python', 'java', 'csharp', 'php']
+      matrix: 
+          languages: ['python', 'java', 'csharp', 'php']
         
 
     permissions:
