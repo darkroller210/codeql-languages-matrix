@@ -9,6 +9,10 @@ jobs:
         
   CodeQL-Build:
     runs-on: ubuntu-latest
+    strategy: 
+          matrix: 
+              lanaguages: ['python', 'java', 'csharp', 'php']
+        
 
     permissions:
       # required for all workflows
@@ -22,8 +26,6 @@ jobs:
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
-        with:
-            languages: java, cpp, python
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
